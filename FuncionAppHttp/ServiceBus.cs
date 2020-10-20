@@ -10,7 +10,7 @@ namespace FuncionAppHttp
         [FunctionName("ServiceBus")]
         public static void Run([ServiceBusTrigger("queue01", Connection = "CONNECTION_STRING_SERVICE_BUS")]string myQueueItem, ILogger log)
         {
-            log.LogInformation($"C# ServiceBus queue trigger function processed message: {myQueueItem}");
+            log.LogInformation($"C# ServiceBus queue trigger function message: {myQueueItem}");
         }
     }
 }
